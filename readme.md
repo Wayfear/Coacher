@@ -1,22 +1,23 @@
 # COACHER
 This is all the code for our ECML-PKDD 2021 Paper: [Zero-Shot Scene Graph Relation Prediction through Commonsense Knowledge Integration](https://arxiv.org/abs/2107.05080). We developed this repository based on KaiHua Tang's [SGG Benchmark Project](https://github.com/KaihuaTang/Scene-Graph-Benchmark.pytorch).
 
+## Installation
 
-## Install
-
-Please follow the instruction sin INSTALL.md to set up the environment.
+Please follow the instructions in INSTALL.md to set up the environment.
 
 ## Data and Settings
 
-We use the public dataset Visual Genome, with our zero-shot setting stored in [last_0.5_biased_zero_shot.pt](https://drive.google.com/file/d/17vhplu-RnupMMkCddDbVne0FbaTVqYTv/view?usp=sharing). After downloading this file, please place it to: `Coacher/maskrcnn_benchmark/data/datasets/evaluation/vg/`
+We use the public dataset [Visual Genome](https://visualgenome.org/), with our zero-shot setting stored in [last_0.5_biased_zero_shot.pt](https://drive.google.com/file/d/17vhplu-RnupMMkCddDbVne0FbaTVqYTv/view?usp=sharing). After downloading this file, please place it to: `Coacher/maskrcnn_benchmark/data/datasets/evaluation/vg/`
 
 The neighbor information is stored in file [VG_neighbor.npy](https://drive.google.com/file/d/1dBut1oF0GnKEcPcwvoCfcewQv1PrES-j/view?usp=sharing). After downloadining this file, please place it to: `Coacher/maskrcnn_benchmark/datasets/vg`
 
-The path information is stored in file [sub_graph_1.4.pth](https://drive.google.com/file/d/1TWSPdsa-4A0i99QXbT--txrYyjQFTczN/view?usp=sharing). After download it please place it to this path `Coacher/maskrcnn_benchmark/datasets/vg`
+The path information is stored in file [sub_graph_1.4.pth](https://drive.google.com/file/d/1TWSPdsa-4A0i99QXbT--txrYyjQFTczN/view?usp=sharing). After downloading it, please place it to: `Coacher/maskrcnn_benchmark/datasets/vg`
 
-Regarding [ConceptNet Embedding](https://github.com/commonsense/conceptnet-numberbatch). Please download the newest version and set the parameters `GLOVE_DIR` as the path where you store the downloaded embedding file.
+Regarding the [ConceptNet Embedding](https://github.com/commonsense/conceptnet-numberbatch), please download the newest version and set the parameters `GLOVE_DIR` as the path where you store the downloaded embedding file.
 
 ## Usage
+
+We include running commands for three proposed approached to integrate knowledge graph for scene graph generation on two datsets.
 
 ### Zero-shot dataset
 
